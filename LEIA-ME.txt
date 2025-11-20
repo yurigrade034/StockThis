@@ -1,0 +1,32 @@
+STOCKTHIS – Sistema de Gerenciamento de Estoque
+
+Este projeto é uma aplicação Java desenvolvida com JavaFX, Maven e banco de dados H2. O objetivo é fornecer uma ferramenta simples e funcional para controle de estoque com persistência local.
+
+1 Como Executar o Projeto
+1.1 Abrindo o projeto no IntelliJ IDEA Abra a pasta do projeto diretamente no IntelliJ.
+
+1.2 Executando pelo Maven No painel lateral Maven, siga o caminho: StockThis > Plugins > javafx > javafx:run Clique duas vezes em javafx:run para iniciar a aplicação.
+
+1.3 Alternativa de execução Também é possível executar diretamente pelo arquivo: HelloApplication.java
+
+Acesso ao Banco de Dados H2 Para abrir o banco de dados, acesse o prompt de comando dentro da pasta do projeto e execute: java -jar h2-2.4.240.jar 2.1 Login H2
+
+URL = "jdbc:h2:./data/stockthis"; USER = "StockThis"; PASSWORD = "12345";
+
+2.3 Para o controle de usuários cadastrados acesse "USUARIO" e clique em "run", após isso ira aparecer os usuarios cadastrados
+
+Observação importante: para registrar um novo usuário ou logar no sistema, o banco de dados precisa estar completamente fechado. Isso inclui a adição de itens no estoque "caso esteja aberto ele nao ira salvar". Esse comportamento parece ser uma limitação do próprio H2.
+
+3 Usuário Padrão para Testes O sistema já possui um usuário pré-cadastrado para facilitar os testes: Email: cleiton123@gmail.com Senha: 12345
+
+4 Funcionalidades do Sistema O aplicativo inclui:
+
+4.1 Cadastro de Itens É possível adicionar itens ao estoque informando: Código do produto Nome Categoria Quantidade Preço
+
+4.2 Ações de Gerenciamento O sistema oferece opções como: Alterar preço Adicionar unidades Remover unidades Excluir itens do sistema Todas as alterações são salvas, e os dados permanecem mesmo após fechar o aplicativo.
+
+4.3 Busca e Filtro O usuário pode: Buscar itens específicos pelo nome ou código Filtrar itens por categoria
+
+5 Observações Gerais Para cadastrar novos usuários, certifique-se de que o banco não está aberto no H2 para evitar erros de conexão.
+
+6 Dashboard. ele mostra um grafico a esquerda com a quantidade de itens, e grafico da esquerda mostra o valor total somado dos itens por categoria.

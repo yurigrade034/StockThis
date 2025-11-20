@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="10" style="-fx-background-color: #181528; -fx-border-radius: #7E57C2; -fx-padding: 20;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.unipar.stockthis.NovoItemController">
+
+    <children>
+        <Label style="-fx-text-fill: #cfa8ff; -fx-font-size: 20px; -fx-font-weight: bold;" text="Novo Item" />
+
+        <GridPane hgap="10" vgap="8">
+            <children>
+                <Label style="-fx-text-fill: white;" text="Código" GridPane.columnIndex="0" GridPane.rowIndex="0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <TextField fx:id="txtCodigo" style="-fx-border-color: #7E57C2; -fx-border-radius: 5; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label style="-fx-text-fill: white;" text="Produto" GridPane.columnIndex="0" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <TextField fx:id="txtNome" style="-fx-border-color: #7E57C2; -fx-border-radius: 5; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label style="-fx-text-fill: white;" text="Categoria" GridPane.columnIndex="0" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <TextField fx:id="txtCategoria" style="-fx-border-color: #7E57C2; -fx-border-radius: 5; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label style="-fx-text-fill: white;" text="Preço" GridPane.columnIndex="0" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+                <TextField fx:id="txtPreco" style="-fx-border-color: #7E57C2; -fx-border-radius: 5; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <Button fx:id="btnAdicionar" onAction="#adicionar" style="-fx-background-color: #3bb54a; -fx-border-color: #1d5d13; -fx-background-insets: 0; -fx-border-radius: 5; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold;" text="Adicionar" />
+
+        <Label fx:id="lblMensagem" textFill="RED" />
+    </children>
+</VBox>

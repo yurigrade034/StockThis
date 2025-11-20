@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.unipar.stockthis.DashboardController">
+
+    <left>
+        <VBox prefWidth="150" spacing="16"
+              style="-fx-background-color: #181528; -fx-border-color: #7E57C2; -fx-padding: 20;">
+            <children>
+                <Button maxWidth="Infinity"
+                        onAction="#irParaEstoque"
+                        style="-fx-background-radius: 12; -fx-background-color: #f5f0ff; -fx-text-fill: #3b285e; -fx-font-weight: bold;"
+                        text="Estoque"/>
+                <Button maxWidth="Infinity"
+                        style="-fx-background-radius: 12; -fx-background-color: #c5b5ff; -fx-text-fill: #181528; -fx-font-weight: bold;"
+                        text="Dashboard"/>
+            </children>
+        </VBox>
+    </left>
+
+    <top>
+        <HBox spacing="10" style="-fx-background-color: #231b3a; -fx-padding: 16;">
+            <children>
+                <Label fx:id="lblUsuario"
+                       style="-fx-text-fill: #e5dbff; -fx-font-size: 18px; -fx-font-weight: bold;"
+                       text="Olá, usuário"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="16" style="-fx-padding: 20; -fx-background-color: #120f20;">
+
+            <VBox spacing="8"
+                  style="-fx-background-color: #231b3a; -fx-padding: 16; -fx-background-radius: 10;">
+                <children>
+                    <Label style="-fx-text-fill: #cfa8ff; -fx-font-size: 20px; -fx-font-weight: bold;"
+                           text="Dashboard"/>
+                </children>
+            </VBox>
+
+            <HBox spacing="12">
+                <children>
+                    <VBox spacing="4"
+                          style="-fx-background-color: #1e1632; -fx-padding: 12; -fx-background-radius: 10;">
+                        <children>
+                            <Label style="-fx-text-fill: #b6a9ff; -fx-font-size: 12px;"
+                                   text="Quantidade de Produtos"/>
+                            <Label fx:id="lblQtdProdutos"
+                                   style="-fx-text-fill: #ffffff; -fx-font-size: 22px; -fx-font-weight: bold;"
+                                   text="0"/>
+                        </children>
+                    </VBox>
+
+                    <VBox spacing="4"
+                          style="-fx-background-color: #1e1632; -fx-padding: 12; -fx-background-radius: 10;">
+                        <children>
+                            <Label style="-fx-text-fill: #b6a9ff; -fx-font-size: 12px;"
+                                   text="Valor Total do Estoque"/>
+                            <Label fx:id="lblValorTotal"
+                                   style="-fx-text-fill: #8ee06a; -fx-font-size: 22px; -fx-font-weight: bold;"
+                                   text="R$ 0,00"/>
+                        </children>
+                    </VBox>
+                </children>
+            </HBox>
+
+            <HBox spacing="16">
+                <children>
+
+                    <AreaChart fx:id="chartEstoque"  prefWidth="450">
+                        <xAxis>
+                            <CategoryAxis label="Produtos"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis label="Quantidade"/>
+                        </yAxis>
+                    </AreaChart>
+
+                    <PieChart fx:id="chartFinanceiro"  prefWidth="260"/>
+
+                </children>
+            </HBox>
+
+        </VBox>
+    </center>
+</BorderPane>

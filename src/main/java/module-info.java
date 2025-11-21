@@ -10,4 +10,6 @@ module br.unipar.stockthis {
     opens br.unipar.stockthis.BANCO_DADOS to javafx.fxml;
     exports br.unipar.stockthis.CADASTRO;
     opens br.unipar.stockthis.CADASTRO to javafx.fxml;
+    exports br.unipar.stockthis.ESTOQUE;
+    opens br.unipar.stockthis.ESTOQUE to javafx.fxml;
 }

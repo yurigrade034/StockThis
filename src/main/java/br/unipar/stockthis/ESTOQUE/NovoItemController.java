@@ -1,4 +1,4 @@
-package br.unipar.stockthis;
+package br.unipar.stockthis.ESTOQUE;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.unipar.stockthis.Estoque.DashboardController">
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.unipar.stockthis.ESTOQUE.DashboardController">
 
     <left>
         <VBox prefWidth="150" spacing="16" style="-fx-background-color: #181528; -fx-border-color: #7E57C2; -fx-padding: 20;">

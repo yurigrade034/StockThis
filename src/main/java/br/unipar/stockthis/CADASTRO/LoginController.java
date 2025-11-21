@@ -1,5 +1,7 @@
-package br.unipar.stockthis;
+package br.unipar.stockthis.CADASTRO;
 
+import br.unipar.stockthis.BANCO_DADOS.UsuarioDAO;
+import br.unipar.stockthis.HelloApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;

@@ -1,5 +1,6 @@
 package br.unipar.stockthis;
 
+import br.unipar.stockthis.CADASTRO.Usuario;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

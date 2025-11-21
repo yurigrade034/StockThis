@@ -1,5 +1,7 @@
 package br.unipar.stockthis;
 
+import br.unipar.stockthis.BANCO_DADOS.ProdutoDAO;
+import br.unipar.stockthis.CADASTRO.Usuario;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

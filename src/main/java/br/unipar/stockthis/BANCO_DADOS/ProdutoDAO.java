@@ -1,4 +1,6 @@
-package br.unipar.stockthis;
+package br.unipar.stockthis.BANCO_DADOS;
+
+import br.unipar.stockthis.Produto;
 
 import java.sql.*;
 import java.util.ArrayList;

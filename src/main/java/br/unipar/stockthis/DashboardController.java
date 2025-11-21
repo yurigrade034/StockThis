@@ -1,5 +1,7 @@
 package br.unipar.stockthis;
 
+import br.unipar.stockthis.BANCO_DADOS.ProdutoDAO;
+import br.unipar.stockthis.CADASTRO.Usuario;
 import javafx.fxml.FXML;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.PieChart;

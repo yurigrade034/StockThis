@@ -8,7 +8,7 @@
 <AnchorPane prefHeight="508.0" prefWidth="668.0" style="-fx-background-color: #1E1E1E;"
             xmlns="http://javafx.com/javafx/17.0.12"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="br.unipar.stockthis.RedefinirSenhaController">
+            fx:controller="br.unipar.stockthis.CADASTRO.RedefinirSenhaController">
 
     <children>
         <VBox alignment="CENTER" spacing="12"

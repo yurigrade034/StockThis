@@ -29,4 +29,5 @@ Observação importante: para registrar um novo usuário ou logar no sistema, o 
 
 5 Observações Gerais Para cadastrar novos usuários, certifique-se de que o banco não está aberto no H2 para evitar erros de conexão.
 
-6 Dashboard. ele mostra um grafico a esquerda com a quantidade de itens, e grafico da esquerda mostra o valor total somado dos itens por categoria.
+6 Dashboard. ele mostra um grafico a esquerda com a quantidade de itens.
+6.1 grafico da esquerda mostra o valor total somado dos itens por categoria.

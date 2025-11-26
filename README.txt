@@ -1,33 +1,116 @@
-STOCKTHIS – Sistema de Gerenciamento de Estoque
+📦 StockThis — Sistema de Gerenciamento de Estoque
+O StockThis é um sistema desenvolvido em Java com JavaFX para controle de estoque, cadastro de produtos, atualização de quantidades e gerenciamento básico das operações em um sistema desktop. O projeto utiliza conexão com banco de dados H2, interface gráfica em FXML e um padrão próximo ao MVC.
 
-Este projeto é uma aplicação Java desenvolvida com JavaFX, Maven e banco de dados H2. O objetivo é fornecer uma ferramenta simples e funcional para controle de estoque com persistência local.
+🚀 Tecnologias Utilizadas
+Java 17+
+JavaFX
+Maven
+H2 Database (h2-2.4.240.jar)
+FXML
+SceneBuilder (para edição das telas)
+MVC simplificado (Controllers, DAO, Model)
 
-1 Como Executar o Projeto
-1.1 Abrindo o projeto no IntelliJ IDEA Abra a pasta do projeto diretamente no IntelliJ.
+🖥️ Funcionalidades Principais
+Login e autenticação
+Dashboard com visão geral
+Cadastro de produtos
+Controle de estoque
+Atualização de preço
+Inserção de novos itens
+Redefinição de senha
+Interface gráfica com FXML
 
-1.2 Executando pelo Maven No painel lateral Maven, siga o caminho: StockThis > Plugins > javafx > javafx:run Clique duas vezes em javafx:run para iniciar a aplicação.
+📁 Estrutura de Pastas (Fiel ao Projeto)
+stockthis/
+└── StockThis-master/
+    ├── .gitignore
+    ├── README.txt
+    ├── h2-2.4.240.jar
+    ├── mvnw
+    ├── mvnw.cmd
+    ├── pom.xml
+    ├── .idea/
+    │   ├── .gitignore
+    │   ├── encodings.xml
+    │   ├── misc.xml
+    │   └── vcs.xml
+    ├── .mvn/
+    │   └── wrapper/
+    │       └── maven-wrapper.jar
+    └── src/
+        ├── main/
+        │   ├── java/
+        │   │   └── br/
+        │   │       └── unipar/
+        │   │           └── stockthis/
+        │   │               ├── controllers/
+        │   │               │   ├── AlterarPrecoController.java
+        │   │               │   ├── CadastroController.java
+        │   │               │   ├── DashboardController.java
+        │   │               │   ├── EstoqueController.java
+        │   │               │   ├── LoginController.java
+        │   │               │   ├── NovoItemController.java
+        │   │               │   ├── RedefinirSenhaController.java
+        │   │               │   └── HelloController.java
+        │   │               ├── dao/
+        │   │               │   ├── ProdutoDAO.java
+        │   │               │   └── UsuarioDAO.java
+        │   │               ├── database/
+        │   │               │   └── Conexao.java
+        │   │               ├── model/
+        │   │               │   ├── Produto.java
+        │   │               │   └── Usuario.java
+        │   │               ├── Main.java
+        │   │               └── util/
+        │   │                   └── Alerta.java
+        │   └── resources/
+        │       ├── Images/
+        │       │   └── IconEstoque.png
+        │       └── br/
+        │           └── unipar/
+        │               └── stockthis/
+        │                   ├── AlterarPreco.fxml
+        │                   ├── Cadastro.fxml
+        │                   ├── Dashboard.fxml
+        │                   ├── Estoque.fxml
+        │                   ├── Login.fxml
+        │                   ├── NovoItem.fxml
+        │                   ├── Redefinir_senha.fxml
+        │                   └── hello-view.fxml
 
-1.3 Alternativa de execução Também é possível executar diretamente pelo arquivo: HelloApplication.java
+⚙️ Como Executar o Projeto
+1. Clonar o repositório
+git clone <url-do-repositorio>
+2. Importar no IntelliJ/Eclipse
+Abra como projeto Maven
+Aguarde baixar dependências
+3. Executar
+No IntelliJ, abra o arquivo:
+src/main/java/br/unipar/stockthis/Main.java
+E execute.
 
-Acesso ao Banco de Dados H2 Para abrir o banco de dados, acesse o prompt de comando dentro da pasta do projeto e execute: java -jar h2-2.4.240.jar 2.1 Login H2
-
+🗄️ Banco de Dados
+O projeto utiliza H2 Database embutido.
+Arquivo incluído:
+h2-2.4.240.jar
+A conexão está definida em:
+src/main/java/br/unipar/stockthis/database/Conexao.java
+Para abrir abra o terminal dentro da pasta do projeto.
+O comando para o terminal: 
+```
+java -jar h2-2.4.240.jar 
+```
 URL = "jdbc:h2:./data/stockthis"; USER = "StockThis"; PASSWORD = "12345";
 
-2.3 Para o controle de usuários cadastrados acesse "USUARIO" e clique em "run", após isso ira aparecer os usuarios cadastrados
+📚 Organização do Código
+Controllers
+Controlam as telas FXML e interações do usuário.
+Model
+Representação das entidades:
+Produto
+Usuário
+DAO
+Acesso ao banco e operações CRUD.
+Util
 
-Observação importante: para registrar um novo usuário ou logar no sistema, o banco de dados precisa estar completamente fechado. Isso inclui a adição de itens no estoque "caso esteja aberto ele nao ira salvar". Esse comportamento parece ser uma limitação do próprio H2.
-
-3 Usuário Padrão para Testes O sistema já possui um usuário pré-cadastrado para facilitar os testes: Email: cleiton123@gmail.com Senha: 12345
-
-4 Funcionalidades do Sistema O aplicativo inclui:
-
-4.1 Cadastro de Itens É possível adicionar itens ao estoque informando: Código do produto Nome Categoria Quantidade Preço
-
-4.2 Ações de Gerenciamento O sistema oferece opções como: Alterar preço Adicionar unidades Remover unidades Excluir itens do sistema Todas as alterações são salvas, e os dados permanecem mesmo após fechar o aplicativo.
-
-4.3 Busca e Filtro O usuário pode: Buscar itens específicos pelo nome ou código Filtrar itens por categoria
-
-5 Observações Gerais Para cadastrar novos usuários, certifique-se de que o banco não está aberto no H2 para evitar erros de conexão.
-
-6 Dashboard. ele mostra um grafico a esquerda com a quantidade de itens.
-6.1 grafico da esquerda mostra o valor total somado dos itens por categoria.
+Classes auxiliares (ex.: alertas e mensagens).

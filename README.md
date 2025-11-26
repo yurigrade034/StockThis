@@ -136,3 +136,6 @@ Util
 
 Classes auxiliares (ex.: alertas e mensagens para o usuário).
 Alerta
+
+
+Autores: Yuri Grade 60005585, Moacir Samoel Anhaia 60005619, Thiago Cornelius 60012173

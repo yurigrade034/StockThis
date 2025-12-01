@@ -1,6 +1,6 @@
 # 📦 StockThis — Sistema de Gerenciamento de Estoque
 
-O **StockThis** é um sistema desenvolvido em Java com JavaFX para controle de estoque, cadastro de produtos, atualização de quantidades e gerenciamento básico das operações em um sistema desktop. O projeto utiliza conexão com banco de dados H2, interface gráfica em FXML e um padrão próximo ao MVC.
+O *StockThis* é um sistema desenvolvido em Java com JavaFX para controle de estoque, cadastro de produtos, atualização de quantidades e gerenciamento básico das operações em um sistema desktop. O projeto utiliza conexão com banco de dados H2, interface gráfica em FXML e um padrão próximo ao MVC.
 
 ---
 
@@ -9,14 +9,14 @@ O **StockThis** é um sistema desenvolvido em Java com JavaFX para controle de e
 - Java JDK 24.0.2
 - JavaFX
 - Maven
-- H2 Database (`h2-2.4.240.jar`)
+- H2 Database (h2-2.4.240.jar)
 - FXML
 - SceneBuilder (para edição das telas)
 - MVC simplificado (Controllers, DAO, Model)
 
 ---
 
-## 🖥️ Funcionalidades Principais
+## 🖥 Funcionalidades Principais
 
 - Login e autenticação
 - Dashboard com visão geral
@@ -37,74 +37,85 @@ O **StockThis** é um sistema desenvolvido em Java com JavaFX para controle de e
 
 ## 📁 Estrutura de Pastas (Fiel ao Projeto)
 
-```text
-stockthis/
-└── StockThis-master/
-    ├── .gitignore
-    ├── README.txt
-    ├── h2-2.4.240.jar
-    ├── mvnw
-    ├── mvnw.cmd
-    ├── pom.xml
-    ├── .idea/
-    │   ├── .gitignore
-    │   ├── encodings.xml
-    │   ├── misc.xml
-    │   └── vcs.xml
-    ├── .mvn/
-    │   └── wrapper/
-    │       └── maven-wrapper.jar
-    └── src/
-        ├── main/
-        │   ├── java/
-        │   │   └── br/
-        │   │       └── unipar/
-        │   │           └── stockthis/
-        │   │               ├── controllers/
-        │   │               │   ├── AlterarPrecoController.java
-        │   │               │   ├── CadastroController.java
-        │   │               │   ├── DashboardController.java
-        │   │               │   ├── EstoqueController.java
-        │   │               │   ├── LoginController.java
-        │   │               │   ├── NovoItemController.java
-        │   │               │   ├── RedefinirSenhaController.java
-        │   │               │   └── HelloController.java
-        │   │               ├── dao/
-        │   │               │   ├── ProdutoDAO.java
-        │   │               │   └── UsuarioDAO.java
-        │   │               ├── database/
-        │   │               │   └── Conexao.java
-        │   │               ├── model/
-        │   │               │   ├── Produto.java
-        │   │               │   └── Usuario.java
-        │   │               ├── Main.java
-        │   │               └── util/
-        │   │                   └── Alerta.java
-        │   └── resources/
-        │       ├── Images/
-        │       │   └── IconEstoque.png
-        |       |
-        │       └── br/
-        │           └── unipar/
-        │               └── stockthis/
-        │                   ├── AlterarPreco.fxml
-        │                   ├── Cadastro.fxml
-        │                   ├── Dashboard.fxml
-        │                   ├── Estoque.fxml
-        │                   ├── Login.fxml
-        │                   ├── NovoItem.fxml
-        │                   ├── Redefinir_senha.fxml
-        │                   └── hello-view.fxml
-        │
-        └──test/
-            └── java/
-                  └── br.unipar.stockthis.BANCO_DADOS/
-                                     └── ProdutoDAOTest.java
+text
 
-```
-⚙️ Como Executar o Projeto
+StockThis/
+├── .idea/
+│   ├── .gitignore
+│   ├── compiler.xml
+│   ├── encodings.xml
+│   ├── jarRepositories.xml
+│   ├── misc.xml
+│   ├── vcs.xml
+│   └── workspace.xml
+│
+├── .mvn/
+│   └── wrapper/
+│       ├── maven-wrapper.jar
+│       └── maven-wrapper.properties
+│
+├── data/
+│   └── stockthis.mv.db
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── br/unipar/stockthis/
+│   │   │       ├── BancoDeDados/
+│   │   │       │   ├── Database.java
+│   │   │       │   ├── ProdutoDAO.java
+│   │   │       │   └── UsuarioDAO.java
+│   │   │       │
+│   │   │       ├── Cadastro/
+│   │   │       │   ├── CadastroController.java
+│   │   │       │   ├── LoginController.java
+│   │   │       │   ├── RedefinirSenhaController.java
+│   │   │       │   └── Usuario.java
+│   │   │       │
+│   │   │       ├── Estoque/
+│   │   │       │   ├── AlterarPrecoController.java
+│   │   │       │   ├── DashboardController.java
+│   │   │       │   ├── EstoqueController.java
+│   │   │       │   ├── HelloController.java
+│   │   │       │   ├── NovoItemController.java
+│   │   │       │   └── Produto.java
+│   │   │       │
+│   │   │       ├── HelloApplication.java
+│   │   │       ├── Launcher.java
+│   │   │       │
+│   │   │       └── module-info.java
+│   │   │
+│   │   └── resources/
+│   │       └── br/unipar/stockthis/
+│   │           ├── AlterarPreco.fxml
+│   │           ├── Cadastro.fxml
+│   │           ├── Dashboard.fxml
+│   │           ├── Estoque.fxml
+│   │           ├── hello-view.fxml
+│   │           ├── Login.fxml
+│   │           ├── Novoltem.fxml
+│   │           ├── Redefinir_senha.fxml
+│   │           │
+│   │           └── Images/
+│   │               └── IconEstoque.png
+│   │
+│   └── test/
+│       └── java/
+│           └── br/unipar/stockthis/BancoDeDados/
+│               └── ProdutoDAOTest.java
+│
+├── .gitignore
+├── h2-2.4.240.jar
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── README.md
+
+
+
+⚙ Como Executar o Projeto
 Clonar o repositório
-git clone <https://github.com/Moacir-Anhaia/StockThis.git>
+git clone <https://github.com/yurigrade034/StockThis.git>
 Importar no IntelliJ/Eclipse
 Aguarde baixar as dependências
 Executar
@@ -112,15 +123,15 @@ No IntelliJ, abra o arquivo:
 src/main/java/br/unipar/stockthis/Main.java
 E execute a aplicação.
 
-🗄️ Banco de Dados
+🗄 Banco de Dados
 O projeto utiliza H2 Database embutido.
 Arquivo incluído:
 h2-2.4.240.jar
 
 Para abrir o console do H2, abra o terminal dentro da pasta do projeto e execute:
-```
+
 java -jar h2-2.4.240.jar
-```
+
 
 No H2, utilize os seguintes dados de conexão:
 

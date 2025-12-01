@@ -66,7 +66,7 @@ StockThis/
 │   │   │       │   ├── ProdutoDAO.java
 │   │   │       │   └── UsuarioDAO.java
 │   │   │       │
-│   │   │       ├── Cadastro/
+│   │   │       ├── Cadastro/ 
 │   │   │       │   ├── CadastroController.java
 │   │   │       │   ├── LoginController.java
 │   │   │       │   ├── RedefinirSenhaController.java

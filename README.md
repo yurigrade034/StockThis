@@ -61,18 +61,18 @@ StockThis/
 │   ├── main/
 │   │   ├── java/
 │   │   │   └── br/unipar/stockthis/
-│   │   │       ├── BancoDeDados/
+│   │   │       ├── BANCO_DADOS/
 │   │   │       │   ├── Database.java
 │   │   │       │   ├── ProdutoDAO.java
 │   │   │       │   └── UsuarioDAO.java
 │   │   │       │
-│   │   │       ├── Cadastro/ 
+│   │   │       ├── CADASTRO/
 │   │   │       │   ├── CadastroController.java
 │   │   │       │   ├── LoginController.java
 │   │   │       │   ├── RedefinirSenhaController.java
 │   │   │       │   └── Usuario.java
 │   │   │       │
-│   │   │       ├── Estoque/
+│   │   │       ├── ESTOQUE/
 │   │   │       │   ├── AlterarPrecoController.java
 │   │   │       │   ├── DashboardController.java
 │   │   │       │   ├── EstoqueController.java
@@ -101,7 +101,7 @@ StockThis/
 │   │
 │   └── test/
 │       └── java/
-│           └── br/unipar/stockthis/BancoDeDados/
+│           └── br/unipar/stockthis/BANCO_DADOS/
 │               └── ProdutoDAOTest.java
 │
 ├── .gitignore
